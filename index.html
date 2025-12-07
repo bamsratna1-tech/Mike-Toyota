@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike | Toyota Surabaya Auto2000</title>
+    <meta name="description" content="Mike Sales Gen Z Toyota Surabaya. Melayani pembelian mobil Toyota seluruh Indonesia. Auto2000 Kenjeran. Dapatkan promo terbaik hari ini.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts: Poppins (Modern/Clean) & Russo One (Sporty/Car Vibe) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Russo+One&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'toyota-red': '#EB0A1E',
+                        'toyota-black': '#191919',
+                        'toyota-dark-gray': '#2C2C2C',
+                        'toyota-silver': '#F2F2F2',
+                    },
+                    fontFamily: {
+                        heading: ['"Russo One"', 'sans-serif'],
+                        body: ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles */
+        .hero-bg {
+            /* Background Mobil Keren (Fortuner/Alphard vibe) */
+            background-image: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.6)), url('aset/supra.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .clip-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .text-outline-red {
+            -webkit-text-stroke: 1px #EB0A1E;
+            color: transparent;
+        }
+
+        /* Animation */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .car-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-body text-gray-800 antialiased selection:bg-toyota-red selection:text-white">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 bg-toyota-black/90 backdrop-blur-md border-b border-gray-800 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <!-- Logo Toyota Text Style -->
+                <span class="font-heading text-2xl tracking-wider text-white">TOYOTA <span class="text-toyota-red">MIKE</span></span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wider">
+                <a href="#home" class="hover:text-toyota-red transition">Home</a>
+                <a href="#promo" class="hover:text-toyota-red transition">Promo</a>
+                <a href="#best-seller" class="hover:text-toyota-red transition">Unit</a>
+                <a href="#testi" class="hover:text-toyota-red transition">Delivery</a>
+            </div>
+
+            <a href="https://wa.me/6281231323273?text=Halo%20Mike,%20saya%20mau%20tanya%20promo%20Toyota%20terbaru" target="_blank" class="hidden md:inline-block px-6 py-2 bg-toyota-red hover:bg-red-700 text-white transition duration-300 text-sm font-bold uppercase tracking-wider rounded skew-x-[-10deg]">
+                <span class="skew-x-[10deg] inline-block">Minta Penawaran</span>
+            </a>
+            
+             <!-- Mobile Menu Button -->
+             <button id="mobile-menu-btn" class="md:hidden text-2xl text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-toyota-black shadow-xl py-6 px-6 flex-col space-y-4 md:hidden border-t border-gray-800">
+            <a href="#home" class="block text-white font-bold hover:text-toyota-red">Home</a>
+            <a href="#promo" class="block text-white font-bold hover:text-toyota-red">Promo Spesial</a>
+            <a href="#best-seller" class="block text-white font-bold hover:text-toyota-red">Daftar Mobil</a>
+            <a href="#contact" class="block text-white font-bold hover:text-toyota-red">Hubungi Saya</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative pt-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+            
+            <!-- Left Content (Text) -->
+            <div class="w-full md:w-3/5 text-white z-10 order-2 md:order-1">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 mb-6 fade-in-up" style="animation-delay: 0.1s;">
+                    <i class="fab fa-instagram text-toyota-red"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">@salesgen.z | 6.5K+ Followers</span>
+                </div>
+                
+                <h1 class="font-heading text-5xl md:text-7xl leading-tight mb-4 fade-in-up" style="animation-delay: 0.3s;">
+                    BEST DEAL <br>
+                    <span class="text-toyota-red">TOYOTA</span> SURABAYA
+                </h1>
+                
+                <p class="text-gray-300 text-lg mb-8 max-w-xl fade-in-up" style="animation-delay: 0.5s;">
+                    Halo, saya <strong>Mike</strong> dari Auto2000 Kenjeran. Siap membantu Anda mendapatkan unit Toyota impian dengan <strong>Diskon Terbaik</strong> & <strong>Proses Tercepat</strong>. Melayani pembelian seluruh Indonesia.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 fade-in-up" style="animation-delay: 0.7s;">
+                    <a href="#best-seller" class="px-8 py-4 bg-toyota-red text-white font-bold uppercase tracking-widest hover:bg-white hover:text-toyota-red transition duration-300 rounded shadow-lg shadow-red-600/30">
+                        Lihat Unit
+                    </a>
+                    <a href="https://wa.me/6281231323273?text=Halo%20Mike,%20bisa%20bantu%20hitungkan%20kredit%20Toyota?" target="_blank" class="px-8 py-4 border border-white text-white font-bold uppercase tracking-widest hover:bg-white hover:text-toyota-black transition duration-300 rounded">
+                        Simulasi Kredit
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Content (Profile Photo) -->
+            <div class="w-full md:w-2/5 flex justify-center z-10 order-1 md:order-2 fade-in-up" style="animation-delay: 0.4s;">
+                <div class="relative">
+                    <!-- Red Circle Background Effect -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-toyota-red/20 rounded-full blur-3xl animate-pulse"></div>
+                    
+                    <!-- FOTO PROFIL MIKE -->
+                    <!-- GANTI src ini dengan foto asli Mike yang pake jas -->
+                    <div class="relative w-[280px] h-[280px] md:w-[350px] md:h-[350px] rounded-full p-2 bg-gradient-to-br from-gray-700 to-black shadow-2xl border-4 border-toyota-red">
+                        <img src="aset/mike.webp" 
+                             alt="Mike Toyota Surabaya" 
+                             class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition duration-500">
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-4 right-4 bg-white text-toyota-black px-4 py-2 rounded-lg shadow-lg flex items-center gap-2">
+                            <i class="fas fa-certificate text-yellow-500"></i>
+                            <div>
+                                <p class="text-[10px] font-bold uppercase text-gray-500">Official Sales</p>
+                                <p class="text-sm font-bold">Auto2000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Down -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce hidden md:block">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Why Choose Mike (Stats) -->
+    <section class="bg-toyota-black text-white py-12 border-b-4 border-toyota-red">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-800">
+                <div class="p-4">
+                    <i class="fas fa-medal text-3xl text-toyota-red mb-3"></i>
+                    <h3 class="text-2xl font-heading">Auto2000</h3>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest">Kenjeran Surabaya</p>
+                </div>
+                <div class="p-4">
+                    <i class="fas fa-users text-3xl text-toyota-red mb-3"></i>
+                    <h3 class="text-2xl font-heading">6.5K+</h3>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest">Followers Trusted</p>
+                </div>
+                <div class="p-4">
+                    <i class="fas fa-shipping-fast text-3xl text-toyota-red mb-3"></i>
+                    <h3 class="text-2xl font-heading">100%</h3>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest">Kirim Seluruh Indo</p>
+                </div>
+                <div class="p-4">
+                    <i class="fas fa-tags text-3xl text-toyota-red mb-3"></i>
+                    <h3 class="text-2xl font-heading">Best Price</h3>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest">Jaminan Termurah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Seller Units -->
+    <section id="best-seller" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-toyota-red font-bold uppercase tracking-widest text-sm">Stock Unit 2025</span>
+                <h2 class="text-4xl md:text-5xl font-heading text-toyota-black mt-2">PILIHAN FAVORIT</h2>
+                <div class="w-24 h-1 bg-toyota-red mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: All New Vellfire -->
+                <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 car-card">
+                    <div class="relative bg-gradient-to-br from-gray-200 to-white p-6 h-64 flex items-center justify-center overflow-hidden">
+                        <img src="aset/vellfire.webp" 
+                             alt="Vellfire" class="w-full object-contain transition duration-500 drop-shadow-xl">
+                        <div class="absolute top-4 right-4 bg-toyota-black text-white text-xs font-bold px-3 py-1 rounded">HYBRID READY</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-heading text-toyota-black mb-1">All New Vellfire</h3>
+                        <p class="text-gray-500 text-sm mb-4">The Crossing Edge</p>
+                        <div class="flex justify-between items-center border-t border-gray-200 pt-4">
+                            <div class="text-xs text-gray-500 font-bold">
+                                <i class="fas fa-gas-pump mr-1"></i> Bensin / Hybrid
+                            </div>
+                            <a href="https://wa.me/6281231323273?text=Halo%20Mike,%20minta%20info%20diskon%20Innova%20Zenix" target="_blank" class="text-toyota-red font-bold hover:underline">Detail <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: All New Avanza -->
+                <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 car-card">
+                    <div class="relative bg-gradient-to-br from-gray-200 to-white p-6 h-64 flex items-center justify-center overflow-hidden">
+                        <img src="aset/avanza.webp" 
+                             alt="All New Avanza" class="w-full object-contain transition duration-500 drop-shadow-xl">
+                        <div class="absolute top-4 right-4 bg-toyota-red text-white text-xs font-bold px-3 py-1 rounded">PROMO DP MINIM</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-heading text-toyota-black mb-1">All New Avanza</h3>
+                        <p class="text-gray-500 text-sm mb-4">MPV Keluarga Indonesia</p>
+                        <div class="flex justify-between items-center border-t border-gray-200 pt-4">
+                            <div class="text-xs text-gray-500 font-bold">
+                                <i class="fas fa-chair mr-1"></i> 7 Seater
+                            </div>
+                            <a href="https://wa.me/6281231323273?text=Halo%20Mike,%20minta%20info%20paket%20kredit%20Avanza" target="_blank" class="text-toyota-red font-bold hover:underline">Detail <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Fortuner -->
+                <div class="group bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 car-card">
+                    <div class="relative bg-gradient-to-br from-gray-200 to-white p-6 h-64 flex items-center justify-center overflow-hidden">
+                        <img src="aset/fortuner.jpg" 
+                             alt="New Fortuner" class="w-full object-contain transition duration-500 drop-shadow-xl">
+                        <div class="absolute top-4 right-4 bg-toyota-black text-white text-xs font-bold px-3 py-1 rounded">GAGAH</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-heading text-toyota-black mb-1">New Fortuner</h3>
+                        <p class="text-gray-500 text-sm mb-4">Dominasi Segala Medan</p>
+                        <div class="flex justify-between items-center border-t border-gray-200 pt-4">
+                            <div class="text-xs text-gray-500 font-bold">
+                                <i class="fas fa-cogs mr-1"></i> 2.8 GR Sport
+                            </div>
+                            <a href="https://wa.me/6281231323273?text=Halo%20Mike,%20minat%20Fortuner%20GR%20Sport" target="_blank" class="text-toyota-red font-bold hover:underline">Detail <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://wa.me/6281231323273" target="_blank" class="inline-block px-8 py-3 border-2 border-toyota-black text-toyota-black font-bold uppercase tracking-widest hover:bg-toyota-black hover:text-white transition duration-300 rounded">
+                    Lihat Katalog Lengkap
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Buy From Mike (Promo) -->
+    <section id="promo" class="py-20 bg-toyota-dark-gray text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-toyota-red opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-toyota-red opacity-10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h4 class="text-toyota-red font-bold uppercase tracking-widest mb-2">Kenapa Harus Sama Mike?</h4>
+                    <h2 class="text-4xl md:text-5xl font-heading mb-6 leading-tight">Urusan Toyota, <br>Serahkan ke Ahlinya.</h2>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        Jangan deal dulu sebelum tanya Mike. Saya pastikan Anda mendapatkan hitungan paling masuk akal, bonus aksesoris melimpah, dan aftersales yang tenang.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-toyota-red flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <span class="font-semibold text-lg">Proses Cepat & Mudah (Dibantu ACC)</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-toyota-red flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-percentage text-white"></i>
+                            </div>
+                            <span class="font-semibold text-lg">DP Minim & Angsuran Ringan</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-toyota-red flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-truck text-white"></i>
+                            </div>
+                            <span class="font-semibold text-lg">Melayani Pembelian Seluruh Indonesia</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="md:w-1/2 bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <h3 class="text-2xl font-heading mb-6 text-center">Konsultasi Gratis</h3>
+                    <div class="space-y-4">
+                        <a href="https://wa.me/6281231323273" class="block w-full py-4 bg-[#25D366] hover:bg-[#1da851] text-white font-bold text-center rounded transition flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-xl"></i> Chat WhatsApp (Fast Respon)
+                        </a>
+                        <div class="text-center text-sm text-gray-400">atau</div>
+                        <a href="tel:081231323273" class="block w-full py-4 bg-white hover:bg-gray-200 text-toyota-black font-bold text-center rounded transition flex items-center justify-center gap-2">
+                            <i class="fas fa-phone text-xl"></i> Telepon Langsung
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Delivery (Social Proof) -->
+    <section id="testi" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-heading text-toyota-black">Momen Delivery</h2>
+                <p class="text-gray-500 mt-2">Terima kasih atas kepercayaan Sobat Toyota kepada Mike.</p>
+            </div>
+
+            <!-- Grid Foto Delivery (Placeholder) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="rounded-lg overflow-hidden h-48 md:h-64 shadow-md hover:shadow-xl transition duration-300">
+                    <img src="aset/ibu.webp" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Delivery Toyota 1">
+                </div>
+                <div class="rounded-lg overflow-hidden h-48 md:h-64 shadow-md hover:shadow-xl transition duration-300">
+                    <img src="aset/apoy.webp" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Delivery Toyota 2">
+                </div>
+                <div class="rounded-lg overflow-hidden h-48 md:h-64 shadow-md hover:shadow-xl transition duration-300">
+                    <img src="aset/bapak.webp" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Delivery Toyota 3">
+                </div>
+                <div class="rounded-lg overflow-hidden h-48 md:h-64 shadow-md hover:shadow-xl transition duration-300">
+                    <img src="aset/image.webp" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Delivery Toyota 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-toyota-black text-white py-12 border-t border-toyota-red">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <h2 class="text-3xl font-heading mb-2">TOYOTA MIKE</h2>
+                    <p class="text-gray-400 text-sm">Auto2000 Kenjeran, Surabaya.</p>
+                    <p class="text-gray-400 text-sm mt-1">Melayani dengan sepenuh hati.</p>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="https://instagram.com/salesgen.z" target="_blank" class="w-10 h-10 rounded bg-white/10 flex items-center justify-center hover:bg-toyota-red transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/6281231323273" target="_blank" class="w-10 h-10 rounded bg-white/10 flex items-center justify-center hover:bg-toyota-red transition">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://linktr.ee/salesgen.z" target="_blank" class="w-10 h-10 rounded bg-white/10 flex items-center justify-center hover:bg-toyota-red transition">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-xs text-gray-500">
+                &copy; 2025 Mike Toyota Surabaya. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WA -->
+    <a href="https://wa.me/6281231323273?text=Halo%20Mike,%20mau%20tanya%20info%20Toyota%20dong" 
+       target="_blank"
+       class="fixed bottom-6 right-6 z-50 group flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-2xl hover:bg-[#128C7E] hover:scale-110 transition-all duration-300">
+        <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75 animate-ping group-hover:hidden"></span>
+        <i class="fab fa-whatsapp text-3xl text-white relative z-10"></i>
+    </a>
+
+    <!-- Script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>
